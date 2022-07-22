@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="CherryCherries">
+    
+    <title>
+        
+            如何在Ubuntu上搭建原神服务器 |
+        
+        Cherries&#39; Blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/CherryCherries/Images-Hosting@master/favicon.8trcesbfefs.png">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"cn","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#00FFFF","avatar":"https://cdn.jsdelivr.net/gh/CherryCherries/Images-Hosting@master/favicon.8trcesbfefs.png","favicon":"https://cdn.jsdelivr.net/gh/CherryCherries/Images-Hosting@master/favicon.8trcesbfefs.png","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                Cherries&#39; Blog
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                ABOUT
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">ABOUT</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">如何在Ubuntu上搭建原神服务器</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="https://cdn.jsdelivr.net/gh/CherryCherries/Images-Hosting@master/favicon.8trcesbfefs.png">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">CherryCherries</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-05-08 15:00:00</span>
+        <span class="mobile">2022-05-08 15:00</span>
+    </span>
+    
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h3><p>本文章基于GitHub的一个原神服务端开源项目进行写作，项目链接地址：<a class="link"   target="_blank" rel="noopener" href="https://github.com/Grasscutters/Grasscutter" >Grasscutters&#x2F;Grasscutter: A server software reimplementation for a certain anime game. (github.com)<i class="fas fa-external-link-alt"></i></a></p>
+<blockquote>
+<p>声明：本文章仅供个人技术研究使用，禁止向任何人提供私人游戏服务器服务！！若违反法律法规，本站概不负责！！</p>
+</blockquote>
+<h3 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h3><p><img src="https://raw.githubusercontent.com/CherryCherries/Images-Hosting/master/原神角色展示.tayjnya3i68.webp" alt="原神角色展示" style="zoom: 33%;" /><img src="https://raw.githubusercontent.com/CherryCherries/Images-Hosting/master/原神武器展示.14pgf1jy71cw.webp" alt="原神武器展示" style="zoom:33%;" /></p>
+<h2 id="部署服务端"><a href="#部署服务端" class="headerlink" title="部署服务端"></a>部署服务端</h2><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">切换到root用户获取权限</span></span><br><span class="line">sudo -i</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更新apt到最新</span></span><br><span class="line">apt-get update</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">安装git</span></span><br><span class="line">apt install git</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">安装screen</span></span><br><span class="line">apt install screen</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装Java"><a href="#安装Java" class="headerlink" title="安装Java"></a>安装Java</h3><ul>
+<li><strong>安装OpenJDK 17</strong></li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install openjdk-17-jdk</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>检查当前Java版本</strong></li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure>
+
+<p>输出类似下面这样：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">openjdk version &quot;17.0.3&quot; 2022-04-19</span><br><span class="line">OpenJDK Runtime Environment (build 17.0.3+7-Ubuntu-0ubuntu0.20.04.1)</span><br><span class="line">OpenJDK 64-Bit Server VM (build 17.0.3+7-Ubuntu-0ubuntu0.20.04.1, mixed mode, sharing)</span><br></pre></td></tr></table></figure>
+
+<p>这样就代表你安装好了！</p>
+<ul>
+<li><strong>设置JAVA_HOME环境变量</strong></li>
+</ul>
+<p>查看Java的安装路径：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo update-alternatives --config java</span><br></pre></td></tr></table></figure>
+
+<p>可以看到你的安装路径在 <code>/usr/lib/jvm/java-17-openjdk-amd64/bin/java</code> </p>
+<p>然后我们打开 <code>/etc/environment</code>  文件：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/environment</span><br></pre></td></tr></table></figure>
+
+<p>假设你想设置 <code>JAVA_HOME</code> 指定到  OpenJDK 17，在文件的末尾，添加下面的行：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">JAVA_HOME=&quot;/usr/lib/jvm/java-17-openjdk-amd64&quot;</span><br></pre></td></tr></table></figure>
+
+<p>想要让修改在当前 shell 生效，你可以登出系统，再登入系统，或者运行下面的命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /etc/environment</span><br></pre></td></tr></table></figure>
+
+<p>验证 <code>JAVA_HOME</code> 环境变量被正确设置：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo $JAVA_HOME</span><br></pre></td></tr></table></figure>
+
+<p>可以看到Java的安装路径</p>
+<h3 id="安装MongoDB"><a href="#安装MongoDB" class="headerlink" title="安装MongoDB"></a>安装MongoDB</h3><ul>
+<li><strong>安装依赖包</strong>(Ubuntu 18.04 LTS +)</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libcurl4 openssl</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>下载包</strong></li>
+</ul>
+<p>打开MongoDB官方下载网站<a class="link"   target="_blank" rel="noopener" href="https://www.mongodb.com/try/download/community" >Try MongoDB Atlas Products | MongoDB<i class="fas fa-external-link-alt"></i></a></p>
+<p>选择版本，平台和包形式，这里我们选择5.08、Ubuntu 20.04、tgz</p>
+<p>点击Copy Link，回到终端输入命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">下载</span></span><br><span class="line">wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-ubuntu2004-5.0.8.tgz</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">解压</span></span><br><span class="line">tar -zxvf mongodb-linux-x86_64-ubuntu2004-5.0.8.tgz</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">将解压包拷贝到指定目录</span></span><br><span class="line">mv mongodb-linux-x86_64-ubuntu2004-5.0.8 /usr/local/mongodb5</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>配置</strong></li>
+</ul>
+<p>MongoDB 的可执行文件位于 bin 目录下，所以可以将其添加到 <strong>PATH</strong> 路径中：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH=/usr/local/mongodb5/bin:$PATH</span><br></pre></td></tr></table></figure>
+
+<p>默认情况下 MongoDB 启动后会初始化以下两个目录：</p>
+<ul>
+<li>数据存储目录：<code>/var/lib/mongodb</code></li>
+<li>日志文件目录：<code>/var/log/mongodb</code></li>
+</ul>
+<p>我们在启动前可以先创建这两个目录并设置当前用户有读写权限：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir -p /var/lib/mongo</span><br><span class="line">sudo mkdir -p /var/log/mongodb</span><br><span class="line">sudo chown `whoami` /var/lib/mongo</span><br><span class="line">sudo chown `whoami` /var/log/mongodb</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>启动服务</strong></li>
+</ul>
+<p>接下来启动MongoDB服务：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongod --dbpath /var/lib/mongo --logpath /var/log/mongodb/mongod.log --fork</span><br></pre></td></tr></table></figure>
+
+<p>看到类似以下信息，说明启动成功：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">about to fork child process, waiting until server is ready for connections.</span><br><span class="line">forked process: 6746</span><br><span class="line">child process started successfully, parent exiting</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装Mitmproxy"><a href="#安装Mitmproxy" class="headerlink" title="安装Mitmproxy"></a>安装Mitmproxy</h3><p>确保你的系统python版本&gt;3.8</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看当前python版本</span></span><br><span class="line">python --version</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">安装mitmproxy包</span></span><br><span class="line">sudo pip install mitmproxy</span><br></pre></td></tr></table></figure>
+
+<h3 id="编译服务端"><a href="#编译服务端" class="headerlink" title="编译服务端"></a>编译服务端</h3><ul>
+<li><strong>clone项目、编译</strong></li>
+</ul>
+<blockquote>
+<p>如果想用dev版本，可以选择clone对应的分支，这里以稳定版举例</p>
+<p>编译时间取决于设备性能，时间较长请耐心等待，如果你不想编译，可以在源码的最新发行版中直接下载</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd ~</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">clone</span>项目</span></span><br><span class="line">git clone https://ghproxy.com/https://github.com/Grasscutters/Grasscutter.git</span><br><span class="line">cd Grasscutter</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">编译</span></span><br><span class="line">./gradlew jar</span><br></pre></td></tr></table></figure>
+
+<p>编译完成后目录下会得到一个编译完成的jar文件</p>
+<ul>
+<li><strong>添加资源文件</strong></li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">创建资源文件夹</span></span><br><span class="line">mkdir resources &amp;&amp; cd resources</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">创建临时下载文件夹</span></span><br><span class="line">mkdir git &amp;&amp; cd git</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">下载资源</span></span><br><span class="line">git clone https://ghproxy.com/https://github.com/Koko-boya/Grasscutter_Resources</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">复制文件</span></span><br><span class="line">cd Grasscutter_Resources/Resources</span><br><span class="line">cp -r TextMap ~/Grasscutter/resources</span><br><span class="line">cp -r Subtitle ~/Grasscutter/resources</span><br><span class="line">cp -r Readable ~/Grasscutter/resources</span><br><span class="line">cp -r ExcelBinOutput ~/Grasscutter/resources</span><br><span class="line">cp -r BinOutput ~/Grasscutter/resources/BinOutput</span><br><span class="line">cp -r Scripts ~/Grasscutter/resources/Scripts</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><del><strong>修复错误资源</strong></del>(现在没问题了)</li>
+</ul>
+<p><del>部分资源有点小问题，我们只要把其中两个配置文件回滚到前面版本就可以了。</del></p>
+<blockquote>
+<p>在后面运行时如果看到什么资源报错也可以用同样的方法</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cd ~/Grasscutter/resources/ExcelBinOutput</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">删除错误资源</span></span><br><span class="line">rm ReliquaryMainPropExcelConfigData.json</span><br><span class="line">rm ReliquaryAffixExcelConfigData.json</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">获取正确资源</span></span><br><span class="line">wget https://ghproxy.com/https://raw.githubusercontent.com/Dimbreath/GenshinData/104c21c6530885e450975b13830639e9ca649799/ExcelBinOutput/ReliquaryMainPropExcelConfigData.json</span><br><span class="line">wget https://ghproxy.com/https://raw.githubusercontent.com/Dimbreath/GenshinData/a92b5842daa911c095f47ef235b2bcd4b388d65a/ExcelBinOutput/ReliquaryAffixExcelConfigData.json</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>初始化服务端</strong></li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">利用screen新建一个窗口</span></span><br><span class="line">screen -S Grasscutter</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">运行服务端</span></span><br><span class="line">cd ~/Grasscutter</span><br><span class="line">java -jar grasscutter.jar #jar文件为之前编译生成的文件</span><br></pre></td></tr></table></figure>
+
+<p>最后输出 <code>Game Server started on port 22102</code> 的字样代表启动成功</p>
+<p>在终端输入<code>stop</code>来停止运行</p>
+<ul>
+<li><strong>修改配置文件</strong></li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim config.json</span><br></pre></td></tr></table></figure>
+
+<p>键入<code>i</code>切换INSERT模式，把文件中的两个IP地址127.0.0.1修改为你服务器的地址，修改完成后按 <code>esc</code> 输入 <code>:wq</code> 保存</p>
+<ul>
+<li><strong>运行服务端</strong></li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar grasscutter.jar</span><br></pre></td></tr></table></figure>
+
+<p>最后停止在 <code>Game Server started on port 22102</code> 的字样</p>
+<p>在终端输入 <code>account create [username] &#123;playerid&#125;</code> 来创建账号</p>
+<p>更多终端指令请查看 <a class="link"   target="_blank" rel="noopener" href="https://github.com/Grasscutters/Grasscutter#grasscutter-commands" >Grasscutters&#x2F;Grasscutter: A server software reimplementation for a certain anime game. (github.com)<i class="fas fa-external-link-alt"></i></a> </p>
+<p>利用 <code>Ctrl+a+d</code> 来退出当前screen窗口</p>
+<ul>
+<li><strong>启动代理</strong></li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">利用screen新建一个窗口</span></span><br><span class="line">screen -S proxy</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">启动代理</span></span><br><span class="line">cd ~/Grasscutter</span><br><span class="line">mitmdump -s proxy.py --ssl-insecure --set block_global=false --listen-port 55555</span><br></pre></td></tr></table></figure>
+
+<p>如果希望在其他端口运行代理，修改 <code>55555</code> 为你期望的端口即可，尽可能不使用常用端口，避免产生冲突，该端口将作为客户端系统代理所用端口</p>
+<p>终端出现以下信息则为开启成功：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">MITM Remote Host: localhost</span><br><span class="line">MITM Remote Port: 443</span><br><span class="line">MITM Use SSL True</span><br><span class="line">Loading script proxy.py</span><br><span class="line">Proxy server listening at http://*:55555</span><br></pre></td></tr></table></figure>
+
+<p>利用 <code>Ctrl+a+d</code> 来退出当前screen窗口</p>
+<ul>
+<li><strong>获取证书</strong></li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /root/.mitmproxy &amp;&amp; ls</span><br></pre></td></tr></table></figure>
+
+<p>目录下的文件说明如下：</p>
+<ul>
+<li>mitmproxy PEM格式的证书和私钥。</li>
+<li>mitmproxy-ca-cert.pem PEM格式的证书。使用它可以在大多数非Windows平台上分发。</li>
+<li>mitmproxy-ca-cert.p12 PKCS12格式的证书。用于Windows。</li>
+<li>mitmproxy-ca-cert.cer 与.pem相同的文件，但某些Android设备需要扩展名。</li>
+</ul>
+<p>这里我们将 <code>mitmproxy-ca-cert.p12</code> 下载到自己的电脑上</p>
+<h2 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h2><blockquote>
+<p>不同的平台安装对应的证书，网络设置按照自己客户端平台设置，这里以Windows举例</p>
+</blockquote>
+<h3 id="安装证书"><a href="#安装证书" class="headerlink" title="安装证书"></a>安装证书</h3><p>双击下载好的 <code>mitmproxy-ca-cert.p12</code> 进入证书安装</p>
+<p>存储位置选择<strong>本地计算机</strong> -&gt; ······ -&gt; ······ -&gt; 将所有的证书都放入下列存储：<strong>受信任的根证书颁发机构</strong> -&gt; 完成</p>
+<h3 id="登录游戏"><a href="#登录游戏" class="headerlink" title="登录游戏"></a>登录游戏</h3><p>先进入一次游戏保证客户端是最新的</p>
+<p><code>设置</code> - <code>网络</code> - <code>代理</code> -<code>手动设置代理</code> </p>
+<p>代理 IP地址为服务器的公网IP ，端口为设置的端口 <code>55555</code> ，关闭 <code>请勿将代理服务器用于本地地址</code> ，清空 <code> 请勿对以下······</code> ，<code>保存</code> </p>
+<p>当看到登陆界面更改时说明已经连接到了私服（如果用上述更改代理方式不成功或者无法更改代理，可以用大佬写的 <code>米哈游代理转向</code> 软件，由易语言开发，爆毒属于正常现象，下载可在 <a class="link"   target="_blank" rel="noopener" href="https://cherrycherries.lanzoul.com/iJCWS088i3ad" >云盘<i class="fas fa-external-link-alt"></i></a> 下载）</p>
+<p>用户名为设置的username，密码可以随便填写</p>
+<p>Enjoy！</p>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>Post title：如何在Ubuntu上搭建原神服务器</li>
+        <li>Post author：CherryCherries</li>
+        <li>Create time：2022-05-08 15:00:00</li>
+        <li>
+            Post link：https://cherrycherries.cc/2022/05/08/Grasscutter/
+        </li>
+        <li>
+            Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2022/05/21/Run/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">利用虚拟机完成乐跑打卡简易教程（Android）</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2022/04/13/BIN/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">如何通过生成虚拟信用卡来白嫖国外各平台的免费服务</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2022</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">CherryCherries</a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A3%B0%E6%98%8E"><span class="nav-number">1.1.</span> <span class="nav-text">声明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA"><span class="nav-number">1.2.</span> <span class="nav-text">效果展示</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E6%9C%8D%E5%8A%A1%E7%AB%AF"><span class="nav-number">2.</span> <span class="nav-text">部署服务端</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="nav-number">2.1.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Java"><span class="nav-number">2.2.</span> <span class="nav-text">安装Java</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85MongoDB"><span class="nav-number">2.3.</span> <span class="nav-text">安装MongoDB</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Mitmproxy"><span class="nav-number">2.4.</span> <span class="nav-text">安装Mitmproxy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%96%E8%AF%91%E6%9C%8D%E5%8A%A1%E7%AB%AF"><span class="nav-number">2.5.</span> <span class="nav-text">编译服务端</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="nav-number">3.</span> <span class="nav-text">客户端</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E8%AF%81%E4%B9%A6"><span class="nav-number">3.1.</span> <span class="nav-text">安装证书</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%99%BB%E5%BD%95%E6%B8%B8%E6%88%8F"><span class="nav-number">3.2.</span> <span class="nav-text">登录游戏</span></a></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/code-copy.js"></script>
+
+
+
+
+<div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/toc.js"></script>
+    
+</div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>

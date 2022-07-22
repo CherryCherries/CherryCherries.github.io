@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="CherryCherries">
+    
+    <title>
+        
+            利用虚拟机完成乐跑打卡简易教程（Android） |
+        
+        Cherries&#39; Blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/CherryCherries/Images-Hosting@master/favicon.8trcesbfefs.png">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"cn","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#00FFFF","avatar":"https://cdn.jsdelivr.net/gh/CherryCherries/Images-Hosting@master/favicon.8trcesbfefs.png","favicon":"https://cdn.jsdelivr.net/gh/CherryCherries/Images-Hosting@master/favicon.8trcesbfefs.png","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                Cherries&#39; Blog
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                ABOUT
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">ABOUT</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">利用虚拟机完成乐跑打卡简易教程（Android）</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="https://cdn.jsdelivr.net/gh/CherryCherries/Images-Hosting@master/favicon.8trcesbfefs.png">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">CherryCherries</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-05-21 18:00:00</span>
+        <span class="mobile">2022-05-21 18:00</span>
+    </span>
+    
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>自己不想跑校园乐跑，又不想麻烦他人，找别人代跑还要花钱，不如自己来刷乐跑吧。</p>
+<blockquote>
+<p>本篇文章仅供学习用途</p>
+</blockquote>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h3 id="硬件"><a href="#硬件" class="headerlink" title="硬件"></a>硬件</h3><ol>
+<li>一部安卓手机（本文测试环境为Android11系统）</li>
+<li>手</li>
+<li>脑子</li>
+</ol>
+<h3 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h3><ol>
+<li>VMOS</li>
+<li>Fake Location</li>
+<li>高校智慧体育</li>
+<li>QQ&#x2F;微信（取决于你的登录方式）</li>
+</ol>
+<p><strong>所有软件均可以在<a class="link"   target="_blank" rel="noopener" href="https://cherrycherries.lanzoul.com/b03j5le6j" >云盘<i class="fas fa-external-link-alt"></i></a>下载，密码9uza。Android11及以下系统使用云盘里1.6.1版本的VMOS，Android12+系统请使用云盘里1.9版本的VMOS并搭配VMOS助手使用</strong></p>
+<h2 id="具体流程"><a href="#具体流程" class="headerlink" title="具体流程"></a>具体流程</h2><h3 id="虚拟机设置"><a href="#虚拟机设置" class="headerlink" title="虚拟机设置"></a>虚拟机设置</h3><ol>
+<li>下载所需要的所有软件，并安装VMOS</li>
+<li>打开VMOS，允许VMOS所需要的权限，选择“我是老手”进入VMOS</li>
+</ol>
+<img src="https://raw.githubusercontent.com/CherryCherries/Images-Hosting/master/VMOS_Pro.3ro4jnm09ts0.webp" alt="VMOS_Pro" style="zoom: 25%;" />
+
+<ol start="3">
+<li>点击<strong>＋</strong>添加虚拟机，选择<strong>Android7.1 Geeks</strong>，点击下载，完成后添加</li>
+</ol>
+<img src="https://raw.githubusercontent.com/CherryCherries/Images-Hosting/master/VMOS_Download.37h2g7wkl3o0.webp" alt="VMOS_Download" style="zoom:25%;" />
+
+<ol start="4">
+<li>进入虚拟机后点击文件传输，勾选几个需要安装的软件后确定</li>
+</ol>
+<img src="https://raw.githubusercontent.com/CherryCherries/Images-Hosting/master/VMOS_Import.3a3e9z5cck80.webp" alt="VMOS_Import" style="zoom:25%;" />
+
+<h3 id="Fake-Location设置"><a href="#Fake-Location设置" class="headerlink" title="Fake Location设置"></a>Fake Location设置</h3><ol>
+<li>打开Fake Location（后面简称FL），登录会员账号进入专业模式（充值一下支持开发者捏🥰）</li>
+<li>打开侧边栏，<strong>运行模式</strong>选择<strong>ROOT</strong>。进入<strong>设置</strong>，<strong>默认地图</strong>选择<strong>高德地图</strong>，勾选<strong>模拟GPS信号（ROOT）</strong>、<strong>增强位置模拟（ROOT）</strong>、<strong>增强隐藏APP</strong>。进入<strong>APP隐藏</strong>，点击**+<strong>，将</strong>高校智慧体育<strong>勾选上，</strong>开启隐藏APP**</li>
+<li>打开侧边栏，进入<strong>路线模拟</strong>来设置路线。自行勾画添加路线，越精细越好，别太离谱！🤗</li>
+</ol>
+<img src="https://raw.githubusercontent.com/CherryCherries/Images-Hosting/master/跑步线路.1chl3n4iqf1c.webp" alt="跑步线路" style="zoom:25%;" />
+
+<ol start="4">
+<li><strong>速&#x2F;频设置</strong>，推荐设置<strong>运动速度</strong>为<strong>4~6m&#x2F;s</strong>，打开<strong>速度浮动</strong>、<strong>步频模拟</strong>，<strong>步频设置</strong>为<strong>2步&#x2F;s</strong>，自我选择是否打开<strong>循环</strong>（取决于你画路线时画的圈数）</li>
+</ol>
+<h3 id="开始乐跑"><a href="#开始乐跑" class="headerlink" title="开始乐跑"></a>开始乐跑</h3><ol>
+<li>打开登录<strong>高校智慧体育</strong></li>
+<li>打开FL的路线模拟，<strong>启动模拟</strong></li>
+<li>开始乐跑！</li>
+</ol>
+<img src="https://raw.githubusercontent.com/CherryCherries/Images-Hosting/master/乐跑打卡.4xevtjp2dx00.webp" alt="乐跑打卡" style="zoom:25%;" />
+
+<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><p><strong>Q：为什么我的成绩被取消或者失效了？</strong></p>
+<p>A：设置路线的时候太离谱，或者平均配速没在规定的范围内（3‘~9’）</p>
+<p><strong>Q：虚拟机会重启或者卡死正常嘛？</strong></p>
+<p>A：正常</p>
+<p><strong>Q：还是不会，那你能帮帮我嘛？</strong></p>
+<p>A：不行😡</p>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>Post title：利用虚拟机完成乐跑打卡简易教程（Android）</li>
+        <li>Post author：CherryCherries</li>
+        <li>Create time：2022-05-21 18:00:00</li>
+        <li>
+            Post link：https://cherrycherries.cc/2022/05/21/Run/
+        </li>
+        <li>
+            Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2022/05/08/Grasscutter/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">如何在Ubuntu上搭建原神服务器</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2022</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">CherryCherries</a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="nav-number">2.</span> <span class="nav-text">准备工作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A1%AC%E4%BB%B6"><span class="nav-number">2.1.</span> <span class="nav-text">硬件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6"><span class="nav-number">2.2.</span> <span class="nav-text">软件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B7%E4%BD%93%E6%B5%81%E7%A8%8B"><span class="nav-number">3.</span> <span class="nav-text">具体流程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%AE%BE%E7%BD%AE"><span class="nav-number">3.1.</span> <span class="nav-text">虚拟机设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fake-Location%E8%AE%BE%E7%BD%AE"><span class="nav-number">3.2.</span> <span class="nav-text">Fake Location设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E4%B9%90%E8%B7%91"><span class="nav-number">3.3.</span> <span class="nav-text">开始乐跑</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-number">4.</span> <span class="nav-text">常见问题</span></a></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/code-copy.js"></script>
+
+
+
+
+<div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/toc.js"></script>
+    
+</div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>
